@@ -2,7 +2,6 @@ package com.chinaunicom.sun.controller;
 
 import com.chinaunicom.sun.model.User;
 import com.chinaunicom.sun.service.UserService;
-import junit.framework.Assert;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -12,6 +11,7 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.Factory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
@@ -56,7 +56,6 @@ public class UserController {
             //5、身份验证失败
         }
 
-        Assert.assertEquals(true, subject.isAuthenticated()); //断言用户已经登录
 
         //6、退出
         subject.logout();
