@@ -6,4 +6,14 @@
 		SELECT id as id,user_name AS userName,password AS password,age as age FROM user_t WHERE id = #{userId}
 	</select>
 
+	<insert id="insertUser">
+		INSERT INTO user_t(user_name111,password,age)
+		VALUES(#{userName},#{password},#{age})
+	</insert>
+
+	<insert id="insertAddress">
+		INSERT INTO address(name)
+		VALUES(#{name})
+	</insert>
+
 </mapper>

@@ -4,6 +4,6 @@ import com.chinaunicom.sun.model.User;
 
 public interface UserService {
 
-    public User getUserById(int userId);
+    public User getUserById(int userId)throws Exception;
 
 }
